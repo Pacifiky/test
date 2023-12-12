@@ -1,15 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "ExportPlaylist",
+  "name": "Test Extension",
   "version": "1.0",
-  "description": "Export YouTube playlists!",
+  "description": "Testing!",
   "permissions": ["storage","tabs"],
   "background": {
     "service_worker": "service-worker.js"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Export Playlists",
+    "default_title": "Testing",
     "default_icon": {
       "16": "icon-16.png",
       "48": "icon-48.png",
@@ -23,7 +23,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.youtube.com/playlist","https://www.youtube.com/watch"],
+      "matches": ["*"],
       "js": ["content-script.js"]
     }
   ]
