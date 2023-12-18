@@ -1,6 +1,7 @@
 chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-        if( request.message === "start" ) {
+    function(obj, sender, res) {
+        console.log(obj.message);
+        if( obj.message === "start" ) {
             start();
         }
     }
@@ -8,4 +9,5 @@ chrome.runtime.onMessage.addListener(
 
 function start(){
     alert("started");
+    chrome.runtime.sendMessage("tab");
 };
