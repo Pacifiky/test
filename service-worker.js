@@ -7,7 +7,7 @@ async function sendMessageToActiveTab(message) {
 
 chrome.runtime.onMessage.addListener((obj, sender, res)=>{
   console.log(obj.message);
-  if(obj.message == "hi"){
+  if(obj.message == "popup"){
     chrome.runtime.sendMessage({message: "service-worker"});
     sendMessageToActiveTab({message: "service-worker"});
   };
