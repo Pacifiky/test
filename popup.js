@@ -7,7 +7,7 @@ function popup() {
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("button1").addEventListener("click", ()=>{
-        chrome.runtime.sendMessage({message: "hi"});
+        chrome.runtime.sendMessage({message: "popup"});
     });
 });
 
