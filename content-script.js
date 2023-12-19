@@ -20,6 +20,6 @@ function start(){
 };
 
 document.getElementById("btn1").addEventListener("click", async ()=>{
-    let response = await chrome.runtime.sendMessage("tab");
+    let response = await chrome.runtime.sendMessage({message: "tab"});
     console.log(response);
 });
