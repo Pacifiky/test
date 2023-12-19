@@ -1,6 +1,6 @@
 let btn = document.createElement("button");
 btn.id = "btn1";
-btn.innerHtml = "Click Me!";
+btn.innerHTML = "Click Me!";
 document.body.appendChild(btn);
 
 chrome.runtime.onMessage.addListener(
