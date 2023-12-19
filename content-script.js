@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener(
             start();
         }
         if(obj.message === "service-worker") {
-            chrome.runtime.sendMessage("tab");
+            chrome.runtime.sendMessage({message:"tab"});
         }
     }
 );
